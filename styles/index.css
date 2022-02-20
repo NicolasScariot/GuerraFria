@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+	font-family: Roboto Mono, Poppins, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	color: white;
+}
+
+/* Default divs */
+.line{
+    display: flex;
+    justify-items: center;
+}
+
+.column{
+    padding: 0;
+    float: left;
+}
+
+.w50{
+	width: 50%;
+}
+
+/* Text Styles */
+h1{
+	padding: 10px;
+	font-weight: 350;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 164%;
+	color: #e4e4e4;
+}
+
+h2, h3, h4, h5{
+	font-weight: 350;
+	padding: 30px 0 15px 0;
+
+}
+
+h2{
+	font-size: 40px;
+	padding-top:90px;
+	padding-left: 35px;
+}
+
+h3{
+	font-size: 30px;
+}
+
+h4{
+	font-size: 27px;
+}
+
+h5{
+	font-size: 25px;
+}
+
+p{
+	font-size: 19px;
+	font-weight: 300;
+	line-height: 1.4;
+	text-indent: 30px;
+	text-align: justify;
+}
+
+strong{
+	font-weight: bolder;
+}
+
+/* Header */
+.logo{
+	width: 20%;
+	padding: 15px;
+	padding-right: 0px;
+	font-weight: 300;
+	font-size: 25px;
+	line-height: 164%;
+	display: flex;
+	justify-content: flex-end;
+	font-family: 'Roboto', sans-serif;
+}
+
+.transition{
+    animation-name: transition;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+	margin-left: 7px;
+	font-size: 30px;
+}
+
+@keyframes transition {
+    0%, 100%{
+        opacity: 0%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+}
+
+nav{
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+#navDiv{
+	max-width: 700px;
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-left: 35%;
+}
+
+.menu {
+	border: none;
+	border-radius: 15px;
+	background: #315838;
+	font-size: 19px;
+	width: 120px;
+	padding: 7px 0;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	background: none;
+}
+
+.menu:hover {
+    cursor: pointer;
+	background: #C4C4C4;
+	transition: 1s;
+	color: black;
+}
+
+.active{
+	background: #315838;
+	color: white;
+}
+
+/* Main */
+main{
+	width: 90%;
+	max-width: 1300px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px 45px;
+	color: black;
+}
+
+.codeBlock{
+	padding: 10px;
+	border-left: 5px #315838 solid;
+	border-radius: 3px;
+	background-color: black;
+	margin: 15px 0;
+}
+
+code{
+	font-family: monospace;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+/* Body */
+body {
+	width: 100%;
+	background-color: #151515;
+	background-image: url(../images/vector.svg); 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	background-blend-mode: lighten;
+	background-attachment: fixed;
+
+	margin: 0 auto;
+	min-width:600px;
+	max-width:2000px
+}
+
+/* Footer */
+footer{
+	font-size: 17px;
+	background-color: #315838;
+	width: 100%;
+}
+
+footer ul{
+	width: 100%;
+	max-width: 1000px;
+	height: 55px;
+	margin: auto;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+footer ul li{
+	display: inline-block;
+	color: white;
+
+	font-family: Roboto Mono;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 100%;
+	text-decoration: none;
+}
+
+footer ul li:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+footer strong{
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*-----------------------------*/
+/*-------ANIMAÇÃO SLOGAN-------*/
+/*-----------------------------*/
+
+/* CRÉDITOS: https://codepen.io/yemon/pen/dzgmxJ */
+
+h2 {
+	display:inline-block;
+	overflow:hidden;
+	white-space:nowrap;
+}
+  
+h2:first-of-type {    /* For increasing performance 
+						 ID/Class should've been used. 
+						 For a small demo 
+						 it's okaish for now */
+	animation: showup 7s infinite;
+}
+  
+h2:last-of-type {
+	width:0px;
+	animation: reveal 7s infinite;
+}
+  
+h2:last-of-type span {
+	margin-left:-355px;
+	animation: slidein 7s infinite;
+}
+  
+@keyframes showup {
+	  0% {opacity:0;}
+	  20% {opacity:1;}
+	  80% {opacity:1;}
+	  100% {opacity:0;}
+}
+  
+@keyframes slidein {
+	  0% { margin-left:-800px; }
+	  20% { margin-left:-800px; }
+	  35% { margin-left:0px; }
+	  100% { margin-left:0px; }
+}
+  
+@keyframes reveal {
+	  0% {opacity:0;width:0px;}
+	  20% {opacity:1;width:0px;}
+	  30% {width:425px;}
+	  80% {opacity:1;}
+	  100% {opacity:0;width:425px;}
+}
+
+/* ÁREA LIVRE PARA EDIÇÃO */
